@@ -3,10 +3,10 @@ import numpy as np
 
 # Create a blank black image
 image_size = (500, 500, 3)  # Width, height, and channels (RGB)
-image = np.zeros(image_size, dtype=np.uint8)  # Initialize with black color
+image = np.zeros(image_size)  # Initialize with black color
 
 # Draw a square
-square_pts = np.array([[100, 100], [100, 300], [300, 300], [300, 100]], np.int32)
+square_pts = np.array([[100, 100], [100, 300], [300, 300], [300, 100]])
 square_pts = square_pts.reshape((-1, 1, 2))
 cv2.fillPoly(image, [square_pts], color=(0, 255, 0))  # Green color
 
